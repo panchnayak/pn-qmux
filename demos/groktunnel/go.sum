@@ -1,0 +1,6 @@
+github.com/panchnayak/pn-go-vhost v0.0.0-20220807162756-2bfe96c3175a h1:el0L0tvi00ho01570peXVDv6bc+pQnlGtboUkUzEkIY=
+github.com/panchnayak/pn-go-vhost v0.0.0-20220807162756-2bfe96c3175a/go.mod h1:FEHbwl/ZLsGDBsSmSbpzBdZ+zekNB3KXWbOOtARVtMc=
+github.com/panchnayak/pn-qmux v0.0.0-20240917000618-1b92b8412b60 h1:qSL8OoXGSdpg9qSb+O+AbZDcu1EXQjjyxoKFpwIM2zE=
+github.com/panchnayak/pn-qmux v0.0.0-20240917000618-1b92b8412b60/go.mod h1:VBmqA1+KAm5hp/7AHn3bRAMMkjPCOnDU8cqim1Jpdw8=
+github.com/panchnayak/pn-qmux/golang v0.0.0-20240917010817-d9e693043e50 h1:IgSr3oCbF2yT6UD5B97arkhyNFBxPJZQ6ObnO06D49A=
+github.com/panchnayak/pn-qmux/golang v0.0.0-20240917010817-d9e693043e50/go.mod h1:zKQkeskqZv548roALasHuEH+eDpq78rXMnB4E3pwiIk=
