@@ -2,32 +2,50 @@
 
 Expose localhost HTTP servers with a public URL
 
-## Build
+### How to create ngrok like Tunnel
+
+This is a demo of creating a ngrok like service using some local commands
+
+1. first create a Server on a Cloud or any where with a Public IP
+2. Have a domain name i.e "pnayak.com" and change the DNS records i.e the A record to pint to the created server 
+
+i.e Type : A , Name : @ , Data: <Public IP> if the public IP of the server is <Public IP>
+
+3. Create another A Record 
+
+Type : A , Name : * , Data: <Public IP>
+
+![godaddy A Record Sample](../images/godaddy-a-record.png)
+
+## Build the go app groktunnel
 ```
 $ go build
 ```
 
 ## Try it out
 
-First we run the groktunnel server. Normally this would be run on a server, but by default uses `vcap.me`
-for a hostname which resolves all of its subdomains to localhost.
+First we run the groktunnel on the cloud server. Normally this would be run on a server, but by default uses `pnayak.com`
+for a hostname which resolves all of its subdomains to this server's <public IP>.
 ```
-$ ./groktunnel
-2021/04/29 16:10:35 groktunnel server [vcap.me] ready!
+$ ./groktunnel -h pnayak.com -b 0.0.0.0
+2024/09/16 01:20:07 groktunnel server [pnayak.com] ready!
 ```
+
+![groktunnel server](../images/groktunnel-server.png)
 
 Now run a local web server. Here is how to run a server listing a file directory with Python:
 ```
-$ python -m SimpleHTTPServer
-Serving HTTP on 0.0.0.0 port 8000 ...
+$ python3 -mhttp.server 8080
+Serving HTTP on :: port 8080 (http://[::]:8080/) ...
 ```
 
 Then we run groktunnel as a client by giving it the local port to expose.
 ```
-$ ./groktunnel 8000
-port 8000 http available at:
-http://y8eyshnpol.vcap.me:9999
+$ ./groktunnel -h pnayak.com 8080
+port 8080 http available at:
+http://delontd88n.pnayak.com:8080
 ```
+![groktunnel client](../images/groktunnel-client.png)
 
 That address should serve the same content as the local web server on 8000. For added effect,
 run both client and server with `-p 80`, which will require root to run the server.
