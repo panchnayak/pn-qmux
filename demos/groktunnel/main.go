@@ -19,8 +19,8 @@ import (
 )
 
 func main() {
-	var port = flag.String("p", "9999", "server port to use")
-	var host = flag.String("h", "vcap.me", "server hostname to use")
+	var port = flag.String("p", "8080", "server port to use")
+	var host = flag.String("h", "pnayak.com", "server hostname to use")
 	var addr = flag.String("b", "127.0.0.1", "ip to bind [server only]")
 	flag.Parse()
 
