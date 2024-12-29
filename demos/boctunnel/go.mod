@@ -1,4 +1,4 @@
-module github.com/panchnayak/pn-qmux/demos/groktunnel
+module github.com/panchnayak/pn-qmux/demos/boctunnel
 
 go 1.22.2
 
